@@ -96,7 +96,7 @@
     overflow-y: scroll;
   }
   
-  #prefecture-list button.hide {
+  #prefecture-list button.none {
     display: none;
   }
   
