@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const date = new Date('2023-06-01');
+        date.setMonth(date.getMonth()-1); //1개월전
+        console.log(date.toLocaleDateString()); //2023.5.1
+        date.setDate(date.getDate()+60); //일 후
+        console.log(date.toLocaleDateString()); //6월30일
+    </script>
+</body>
+</html>
