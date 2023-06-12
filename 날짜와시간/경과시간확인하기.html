@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경과시간확인하기</title>
+</head>
+<body>
+
+    <div class="log"></div>
+
+    <script>
+        //스크립트 시작 지점의 기록
+        const oldTime = Date.now();
+
+        setInterval(()=>{
+            const currentTime = Date.now();
+            //경과한 밀리초 가져오기
+            const diff = currentTime - oldTime; //현재시간 - 시작기간 
+            //초 단위 변환하기
+            const sec = Math.floor(diff/1000);
+
+            document.querySelector('.log').innerHTML = `${sec}초 경과`;
+        }, 1000);
+    </script>
+</body>
+</html>
