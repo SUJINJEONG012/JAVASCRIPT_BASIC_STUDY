@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜차이 구하기</title>
+</head>
+<body>
+    
+<div class="log"></div>
+<script>
+const dateA = new Date('2023/06/01');
+const dateB = new Date('2023/05/01');
+const diffMsec =  dateA.getTime() - dateB.getTime();
+const diffDate = diffMsec / (24 *60 * 60 * 1000);// 일수계산
+/*
+시간단위로 차이   60 * 60 * 1000
+분 단위로 차이 60 * 1000
+*/
+document.querySelector('.log').innerHTML= `날짜의 차이는 ${diffDate}일 입니다.`;
+</script>
+</body>
+</html>
