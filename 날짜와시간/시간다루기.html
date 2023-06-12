@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="log"></div>
+    
+    <script>
+      const date = new Date();
+      const hour = date.getHours();
+      const minutes = date.getMinutes();
+      const seconds = date.getSeconds();
+
+      const label = `${hour}시 ${minutes}분 ${seconds}초`;
+      document.querySelector('.log').innerHTML=` 지금은 ${label} 입니다.`;
+    </script>
+</body>
+</html>
