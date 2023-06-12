@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="log"></div>
+    <script>
+        const date = new Date();
+        const day = date.getDay();
+        console.log(day);
+        const dayList =['일','월','화','수','목','금','토',];
+        const label = dayList[day];
+        console.log(dayList[day])
+        document.querySelector('.log').innerHTML = `오늘은 ${label}요일입니다.`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="log"></div>
+    <script>
+       const date = new Date();
+       
+       const locale = date.toLocaleString();
+       console.log(locale); //2023. 6. 12. 오전 10:54:35
+       const localeDate = date.toLocaleDateString();
+       console.log(localeDate); //2023. 6. 12.
+       const localeTime = date.toLocaleTimeString();
+       console.log(localeTime); //오전 10:55:49
+
+       document.querySelector('.log').innerHTML = (` ${locale} <br/> ${localeDate} <br/> ${localeTime}`);
+    </script>
+</body>
+</html>
