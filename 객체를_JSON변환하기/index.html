@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체를_JSON변환하기</title>
+</head>
+<body>
+    <script>
+      const data = {a: 1000, b:'여러분 안녕하세요.'};
+      console.log(data);      
+      //const str = JSON.stringify(data);
+      //console.log(str);  
+      // 들여쓰기 적용하기
+      const str1= JSON.stringify(data, null, ' ');
+      console.log(str1);
+;    </script>
+    
+</body>
+</html>
