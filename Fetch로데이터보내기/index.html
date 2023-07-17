@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fetch로데이터보내기</title>
 </head>
 <body>
-    
+    <!-- 
+        1. 웹 서버에 데이터를 전달하고 싶을 때 
+        2. 웹 서버 연동 프로그램을 만들고 싶을 때
+        3. JSON포맷 방식으로 서버에 데이터 데이터 전송
+    -->
+
+    <script>
+        const obj = {hello : 'world'};
+        const data = {
+            method:"POST",
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify(obj)
+        };
+        fetch('./new', data)
+        .then((res)=> res.text())
+        .then(console.log)
+    </script>
+
+
+
 </body>
 </html>
