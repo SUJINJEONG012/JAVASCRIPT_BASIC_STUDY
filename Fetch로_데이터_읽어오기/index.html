@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch로_데이터_읽어오기</title>
+</head>
+<body>
+
+    <div id="log"></div>
+
+    <script>
+        // Promise 사용하는 방법
+        // fetch('sample.json')
+        // .then((data) => data.json())
+        // .then((obj) => {
+        //     console.log(obj);
+        // });
+        
+        // await, async
+        async function load(){
+            //파일 읽어오기
+            const data = await fetch('sample.json');
+            //json 으로 해석
+            const obj = await data.json();
+            console.log(obj);
+            //텍스트출력
+            document.querySelector('#log').innerHTML= JSON.stringify(obj, null, '  ');
+        }
+        load();
+
+    </script>
+</body>
+</html>
