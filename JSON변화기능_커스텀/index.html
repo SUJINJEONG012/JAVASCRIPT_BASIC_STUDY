@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON변화기능_커스텀</title>
+</head>
+<body>
+    <script>
+    const replacer = (key, value) =>{
+        //숫자 형식은 제외
+        if(typeof value === 'number'){
+            return undefined;
+        }
+        return value;
+    };
+    const obj = {
+        pref:'seoul',
+        orange:100,
+        flag:true,
+        apple:100
+    };
+    const str = JSON.stringify(obj, replacer,' ');
+    console.log(str);
+    </script>
+</body>
+</html>
