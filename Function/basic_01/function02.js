@@ -23,5 +23,9 @@ a1('Hello','Parameter', 'Argument');
 //console.log(arguments); 선언하지 않았는데 쓸 수 있는건 function 함수 안에선 기본으로 사용 할 수있음. 화살표 함수안에선 X
 
 
-
+// 화살표함수,  { return } 생략가능
+const f = (x,y,z) =>{
+    return x*y*z;
+}
+f(2,3,4);
 
