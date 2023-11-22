@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항연산자</title>
+</head>
+<body>
+    <script>
+        // 조건 ? 조건이 true일때의 처리 : 조건이 false일때의 처리 
+        const val1 = 1 >0 ? "true" : "false"
+        console.log(val1);
+
+        const printFormattedNum = (num) =>{
+            const formattedNum = typeof num === "number" ? num.toLocaleString : "숫자를 입력하세요.";
+            console.log(formattedNum);
+        };
+
+        printFormattedNum(1300);
+        printFormattedNum("1300");
+
+    </script>
+</body>
+</html>

@@ -11,8 +11,25 @@
         const nameArr = ["안젤라","니키","윌리"];
         for(index=0; index < nameArr.length; index ++){
             console.log(nameArr[index]);
+            console.log(`${index+1}번째는 ${nameArr[index]}입니다.`);
         }
-        const nameArr2 = nameArr.map((name)=> console.log(name));
+
+        const nameArr2= nameArr.map((name,index)=> console.log(`${index+1}번째는 ${name}입니다.`));
+
+        console.log("=================================================")
+        
+        //filter함수
+        //배열 정의
+        const numArr = [1,2,3,4,5];
+        //홀수만 추출
+        const newNumArr = numArr.filter((num)=>{
+            return num%2 === 1;
+        });
+        console.log(newNumArr);
+
+        
+        
+
     </script>
 </body>
 </html>
