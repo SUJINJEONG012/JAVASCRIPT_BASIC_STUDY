@@ -19,6 +19,14 @@
         printFormattedNum(1300);
         printFormattedNum("1300");
 
+        //함수 return 부분에 삼항연산자 이용 
+        //두인수의 합이 100이 넘는지 판정하는 함수
+        const checkSumOver100 = function(num1, num2){
+            return num1 + num2 > 100 ? "100을 넘었습니다!" : "허용범위 안입니다."
+        }
+        console.log(checkSumOver100(50,40));
+        console.log(checkSumOver100(50,70));
+        
     </script>
 </body>
 </html>
