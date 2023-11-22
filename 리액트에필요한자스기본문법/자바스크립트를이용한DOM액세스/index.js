@@ -1,8 +1,17 @@
-// button 태그 생성
-const buttonEl = document.createElement("button");
-// 버튼 라벨 설정
-buttonEl.textContent = "버튼";
-// 영역 1의 div 태그 얻기
+// 버튼 추가
+const button = document.createElement("button");
+console.log(button);
+
+button.textContent = "버튼";
+
 const div1El = document.querySelector(".container");
-// div태그 아래에 button 태그를 추가 
-div1El.appendChild(buttonEl);
+console.log(div1El);
+div1El.appendChild(button);
+
+// h1삭제
+const h1El = document.getElementById("title");
+//body태그 얻기
+const bodyEl = document.querySelector("body");
+bodyEl.removeChild(h1El);
+//body태그 아래부터 삭제, 내용이 전부 다 삭제됨
+bodyEl.textContent = null; 
